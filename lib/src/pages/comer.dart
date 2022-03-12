@@ -8,10 +8,28 @@ class ComerWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-        elevation: 8,
-        child: Text(
-          titulo,
-          style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+        elevation: 10,
+        child: Column(
+          children: [
+            SizedBox(
+              height: 150,
+              width: 260,
+              child: Stack(fit: StackFit.expand, children: [
+                const Image(
+                  image: AssetImage('assets/comerfoto.jpg'),
+                  fit: BoxFit.fill,
+                ),
+                Align(
+                  alignment: Alignment.bottomRight,
+                  child: Text(
+                    titulo,
+                    style: const TextStyle(
+                        fontSize: 24, fontWeight: FontWeight.bold),
+                  ),
+                ),
+              ]),
+            ),
+          ],
         ));
   }
 }

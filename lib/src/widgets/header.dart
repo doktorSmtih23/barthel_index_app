@@ -9,11 +9,15 @@ class HeaderWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       elevation: 8,
-      child: Center(
-          child: Text(
-        titulo,
-        style: const TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
-      )),
+      child: Column(
+        children: [
+          Center(
+              child: Text(
+            titulo,
+            style: const TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+          )),
+        ],
+      ),
     );
   }
 }
